@@ -1,0 +1,15 @@
+version: v1
+plugins:
+  - name: go
+    out: gen/go
+    opt:
+      - paths=source_relative
+  - name: go-grpc
+    out: gen/go
+    opt:
+      - paths=source_relative
+  - name: grpc-gateway
+    out: gen/go
+    opt:
+      - paths=source_relative
+      - generate_unbound_methods=true,grpc_api_configuration=config.yaml,standalone=true,allow_delete_body=true,generate_unbound_methods=true

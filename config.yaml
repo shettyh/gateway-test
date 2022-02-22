@@ -1,0 +1,8 @@
+type: google.api.Service
+config_version: 3
+
+http:
+  rules:
+    - selector: test.my_service1.v1.TestService1.Check
+      post: "/v1/resources"
+      body: "*"
